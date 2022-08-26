@@ -4,15 +4,28 @@
   <label for="name">Name:</label>
   <input id="name" type="text" name="cat[name]">
   <br>
-  <label for="color">Color:</label>
-  <input id="color" type="text" name="cat[color]">
+  <input type="radio" name="cat[sex]" id="M" value="M">
+  <label for="M">Male</label>
+  <input type="radio" name="cat[sex]" id="F" value="F">
+  <label for="F">Female</label>
   <br>
+ 
+  <label for="color">Color:</label>
+  <select name="cat[color]" id="color">
+    <% Cat::CAT_COLORS.each do |color| %>
+      <option value="<%= color %>"><%= color %></option>
+    <% end %>
+  </select>
+  <!-- name is the key into the params and value is what the values are -->
+  
+  <br>
+
   <label for="birth_date">Birthday:</label>
   <input id="birth_date" type="text" name="cat[birth_date]">
+
+
   <br>
-  <label for="sex">Sex:</label>
-  <input id="sex" type="text" name="cat[sex]">
-  <br>
+
   <label for="description">description:</label>
   <input id="description" type="text" name="cat[description]">
   <br>
