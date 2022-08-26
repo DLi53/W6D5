@@ -1,0 +1,36 @@
+
+<form action="<%= action == :edit ? cat_url(cat) : cats_url %>" method="POST">
+  <input type="hidden" name="_method" value="PATCH">
+
+  <label for="name">Name:</label>
+  <input id="name" type="text" name="cat[name]" value="<%= cat.name %>">
+  <br>
+  
+  <input type="radio" name="cat[sex]" id="M" value="M" <%= "checked" if cat.sex == "M" %>>
+  <label for="M">Male</label>
+  <input type="radio" name="cat[sex]" id="F" value="F" <%= "checked" if cat.sex == "F" %>>
+  <label for="F">Female</label>
+  <br>
+ 
+  <label for="color">Color:</label>
+  <select name="cat[color]" id="color">
+    <option disabled="disabled" selected>Select a color</option>
+
+    <% Cat::CAT_COLORS.each do |color| %>
+      <option value="<%= color %>" <%= "selected" if cat.color == color %> ><%= color %></option>
+    <% end %>
+
+  </select>
+  <!-- name is the key into the params and value is what the values are -->
+  <br>
+
+  <label for="birth_date">Birthday:</label>
+  <input id="birth_date" type="date" name="cat[birth_date]" value="<%= cat.birth_date %>">
+  <br>
+
+  <label for="description">description:</label>
+  <textarea id="description" type="text" name="cat[description]" ><%= cat.description %></textarea>
+  <br>
+
+  <input type="submit" value="Create Cat">
+</form>
