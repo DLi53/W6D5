@@ -1,0 +1,11 @@
+class CreateCatRentalRequests < ActiveRecord::Migration[7.0]
+  def change
+    create_table :cat_rental_requests do |t|
+      t.references :cat, foreign_key: true, null: false
+      t.date :start_date, null: false
+      t.date :end_date, null: false
+      t.string :status, default: 'PENDING', null: false
+      t.timestamps
+    end
+  end
+end

@@ -1,6 +1,8 @@
 
 <form action="<%= action == :edit ? cat_url(cat) : cats_url %>" method="POST">
-  <input type="hidden" name="_method" value="PATCH">
+  <% if action == :edit  %>
+    <input type="hidden" name="_method" value="PATCH">
+  <% end %>
 
   <label for="name">Name:</label>
   <input id="name" type="text" name="cat[name]" value="<%= cat.name %>">
@@ -32,5 +34,11 @@
   <textarea id="description" type="text" name="cat[description]" ><%= cat.description %></textarea>
   <br>
 
-  <input type="submit" value="Create Cat">
+  <% if action == :edit %>
+    <% button_label = 'Edit Cat' %>
+  <% else %>
+    <% button_label = 'Create Cat' %>
+  <% end %>
+  <input type="submit" value="<%= button_label %>">
+  
 </form>

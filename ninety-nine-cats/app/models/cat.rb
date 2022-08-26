@@ -23,6 +23,9 @@ class Cat < ApplicationRecord
     validates :sex, inclusion: { in: ['M', 'F'] }
     validate :birth_date_cannot_be_future
 
+    has_many :cat_rental_requests,
+        dependent: :destroy
+
     def birth_date_cannot_be_future
         if birth_date.present? && birth_date > Date.today
             errors.add(:birth_date, "can't be in the future")

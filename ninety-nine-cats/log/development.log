@@ -1158,3 +1158,171 @@ Processing by CatsController#index as HTML
 Completed 200 OK in 85ms (Views: 84.1ms | ActiveRecord: 0.3ms | Allocations: 2327)
 
 
+Started GET "/cats/1/edit" for ::1 at 2022-08-26 16:03:00 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (40.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:29:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/_form.html.erb (Duration: 8.7ms | Allocations: 535)
+  Rendered cats/edit.html.erb within layouts/application (Duration: 31.4ms | Allocations: 1093)
+  Rendered layout layouts/application.html.erb (Duration: 302.8ms | Allocations: 5009)
+Completed 200 OK in 415ms (Views: 335.0ms | ActiveRecord: 6.1ms | Allocations: 16850)
+
+
+Started GET "/cats/new" for ::1 at 2022-08-26 16:03:11 -0400
+Processing by CatsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (Duration: 0.6ms | Allocations: 64)
+  Rendered cats/new.html.erb within layouts/application (Duration: 25.7ms | Allocations: 246)
+  Rendered layout layouts/application.html.erb (Duration: 88.5ms | Allocations: 1680)
+Completed 200 OK in 110ms (Views: 109.3ms | ActiveRecord: 0.0ms | Allocations: 2027)
+
+
+Started GET "/cats/new" for ::1 at 2022-08-26 16:04:16 -0400
+Processing by CatsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (Duration: 18.3ms | Allocations: 405)
+  Rendered cats/new.html.erb within layouts/application (Duration: 123.5ms | Allocations: 683)
+  Rendered layout layouts/application.html.erb (Duration: 192.5ms | Allocations: 2490)
+Completed 200 OK in 237ms (Views: 236.5ms | ActiveRecord: 0.0ms | Allocations: 3199)
+
+
+Started GET "/cats/new" for ::1 at 2022-08-26 16:07:11 -0400
+Processing by CatsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (Duration: 16.3ms | Allocations: 482)
+  Rendered cats/new.html.erb within layouts/application (Duration: 38.2ms | Allocations: 757)
+  Rendered layout layouts/application.html.erb (Duration: 85.8ms | Allocations: 2575)
+Completed 200 OK in 96ms (Views: 95.8ms | ActiveRecord: 0.0ms | Allocations: 3312)
+
+
+Started GET "/cats/1/edit" for ::1 at 2022-08-26 16:07:17 -0400
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:29:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/_form.html.erb (Duration: 0.6ms | Allocations: 92)
+  Rendered cats/edit.html.erb within layouts/application (Duration: 8.3ms | Allocations: 273)
+  Rendered layout layouts/application.html.erb (Duration: 96.5ms | Allocations: 1694)
+Completed 200 OK in 102ms (Views: 99.3ms | ActiveRecord: 0.2ms | Allocations: 2570)
+
+
+Started PATCH "/cats/1" for ::1 at 2022-08-26 16:07:25 -0400
+Processing by CatsController#update as HTML
+  Parameters: {"cat"=>{"name"=>"DanielLi", "sex"=>"M", "color"=>"red", "birth_date"=>"1993-10-09", "description"=>"Me"}, "id"=>"1"}
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:34:in `update'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:35:in `update'
+  [1m[36mCat Update (46.1ms)[0m  [1m[33mUPDATE "cats" SET "name" = $1, "updated_at" = $2 WHERE "cats"."id" = $3[0m  [["name", "DanielLi"], ["updated_at", "2022-08-26 20:07:25.269672"], ["id", 1]]
+  ↳ app/controllers/cats_controller.rb:35:in `update'
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cats_controller.rb:35:in `update'
+Completed 200 OK in 73ms (Views: 0.4ms | ActiveRecord: 52.0ms | Allocations: 4463)
+
+
+Started GET "/cats/1/edit" for ::1 at 2022-08-26 16:08:11 -0400
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:29:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/_form.html.erb (Duration: 0.3ms | Allocations: 144)
+  Rendered cats/edit.html.erb within layouts/application (Duration: 0.5ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 65.7ms | Allocations: 1926)
+Completed 200 OK in 308ms (Views: 66.6ms | ActiveRecord: 10.1ms | Allocations: 6899)
+
+
+Started PATCH "/cats/1" for ::1 at 2022-08-26 16:08:18 -0400
+Processing by CatsController#update as HTML
+  Parameters: {"cat"=>{"name"=>"Danieowaier", "sex"=>"M", "color"=>"red", "birth_date"=>"1993-10-09", "description"=>"Me"}, "id"=>"1"}
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:34:in `update'
+  [1m[36mTRANSACTION (6.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:35:in `update'
+  [1m[36mCat Update (17.8ms)[0m  [1m[33mUPDATE "cats" SET "name" = $1, "updated_at" = $2 WHERE "cats"."id" = $3[0m  [["name", "Danieowaier"], ["updated_at", "2022-08-26 20:08:18.219657"], ["id", 1]]
+  ↳ app/controllers/cats_controller.rb:35:in `update'
+  [1m[36mTRANSACTION (13.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cats_controller.rb:35:in `update'
+Redirected to http://localhost:3000/cats/1
+Completed 302 Found in 50ms (ActiveRecord: 38.8ms | Allocations: 2943)
+
+
+Started GET "/cats/1" for ::1 at 2022-08-26 16:08:18 -0400
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (2.1ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 12.4ms | Allocations: 311)
+  Rendered layout layouts/application.html.erb (Duration: 55.6ms | Allocations: 1732)
+Completed 200 OK in 71ms (Views: 62.5ms | ActiveRecord: 2.1ms | Allocations: 2538)
+
+
+Started GET "/cats/new" for ::1 at 2022-08-26 16:08:23 -0400
+Processing by CatsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered cats/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 141)
+  Rendered layout layouts/application.html.erb (Duration: 100.1ms | Allocations: 1551)
+Completed 200 OK in 101ms (Views: 101.0ms | ActiveRecord: 0.0ms | Allocations: 1779)
+
+
+Started POST "/cats" for ::1 at 2022-08-26 16:08:40 -0400
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"fried chicken", "sex"=>"F", "color"=>"yellow", "birth_date"=>"2022-08-08", "description"=>"alright"}}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:16:in `create'
+  [1m[36mCat Create (1.0ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "2022-08-08"], ["color", "yellow"], ["name", "fried chicken"], ["sex", "F"], ["description", "alright"], ["created_at", "2022-08-26 20:08:40.910897"], ["updated_at", "2022-08-26 20:08:40.910897"]]
+  ↳ app/controllers/cats_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cats_controller.rb:16:in `create'
+Redirected to http://localhost:3000/cats/3
+Completed 302 Found in 11ms (ActiveRecord: 3.9ms | Allocations: 2144)
+
+
+Started GET "/cats/3" for ::1 at 2022-08-26 16:08:40 -0400
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCat Load (4.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 74.0ms | Allocations: 1487)
+Completed 200 OK in 92ms (Views: 74.4ms | ActiveRecord: 4.5ms | Allocations: 2199)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(723150122408807205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCatRentalRequests (20220826201033)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (54.6ms)[0m  [1m[35mCREATE TABLE "cat_rental_requests" ("id" bigserial primary key, "cat_id" bigint NOT NULL, "start_date" date NOT NULL, "end_date" date NOT NULL, "status" character varying DEFAULT 'PENDING' NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_9c8580551f"
+FOREIGN KEY ("cat_id")
+  REFERENCES "cats" ("id")
+)[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE INDEX "index_cat_rental_requests_on_cat_id" ON "cat_rental_requests" ("cat_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220826201033"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(723150122408807205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCat Load (1.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCatRentalRequest Create (26.9ms)[0m  [1m[32mINSERT INTO "cat_rental_requests" ("cat_id", "start_date", "end_date", "status", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["cat_id", 1], ["start_date", "2022-02-25"], ["end_date", "2022-02-27"], ["status", "PENDING"], ["created_at", "2022-08-26 20:35:08.808630"], ["updated_at", "2022-08-26 20:35:08.808630"]]
+  [1m[36mTRANSACTION (21.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCatRentalRequest Load (0.3ms)[0m  [1m[34mSELECT "cat_rental_requests".* FROM "cat_rental_requests" WHERE "cat_rental_requests"."cat_id" = $1[0m  [["cat_id", 1]]
+  [1m[36mCatRentalRequest Load (3.3ms)[0m  [1m[34mSELECT "cat_rental_requests".* FROM "cat_rental_requests" WHERE "cat_rental_requests"."cat_id" = $1 AND "cat_rental_requests"."id" IS NOT NULL AND ((start_date BETWEEN '2022-02-25' AND '2022-02-27') OR (end_date BETWEEN '2022-02-25' AND '2022-02-27'))[0m  [["cat_id", 1]]
+  [1m[36mCatRentalRequest Load (1.3ms)[0m  [1m[34mSELECT "cat_rental_requests".* FROM "cat_rental_requests" WHERE "cat_rental_requests"."cat_id" = $1 AND "cat_rental_requests"."id" IS NOT NULL AND ((start_date BETWEEN '2021-01-01' AND '2021-01-02') OR (end_date BETWEEN '2021-01-01' AND '2021-01-02'))[0m  [["cat_id", 1]]
