@@ -1,0 +1,9 @@
+<h1>Request a Cat Rental</h1>
+
+<select name="cat_rental_request[cat]" id="cat">
+  <% @cats.each do |cat| %>
+    <option value="<%= cat %>" <%= "selected" if cat.color == color %> ><%= color %></option>
+  <% end %>
+</select>
+
+<!--  -->
